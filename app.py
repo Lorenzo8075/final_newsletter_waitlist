@@ -35,7 +35,7 @@ def index():
 
     return render_template("index.html",css=url_for('static',filename='styles.css'))
 
-@app.route("/thankyou", methods=["GET","POST"])
+@app.route("/thankyou", methods=["GET"])
 def thank_you():
     return render_template("thankyou.html")
 
