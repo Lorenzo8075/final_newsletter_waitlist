@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles.css') }}">
+    <title>UNI20 Newsletter</title>
+</head>
+
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    </header>
+    <div class="container">
+        <div class="left">
+            <h2>Welcome to the UNI20 Newsletter Fam 🌍</h2>
+            <div>Your one-stop hub for all things international student life in the US! 🇺🇸🎓</div>
+
+            <h3>Fresh Immigration Scoop 📰</h3>
+            <div>Stay in-the-know with the latest visa, immigration policies, scholarships, and all the edu-buzz you need </div>
+
+            <h3>Jobs & Internships 💼</h3>
+            <div>Find guidance on work permits, networking, and job-search strategies, as well as exclusive internship and job opportunities for international students</div>
+
+            <h3>Events & Meetups 🎉</h3>
+            <div>Get exclusive and first access to the coolest events, workshops, and webinars tailored for international students, covering career growth, culture vibes, and making connections.</div>
+        </div>
+        <div class="right">
+            <h1>Suscribe to Our Newsletter</h1>
+            <form class="subscription-form" method="POST" action="/">
+                <input type="email" id="email" name="email" placeholder="Enter your email..." required>
+                <button type="submit">Join the waitlist</button>
+                <div class="error-message">
+                    {% with messages = get_flashed_messages() %} {% if messages %}
+                    <div>{{ messages[0] }}</div>
+                    {% endif %} {% endwith %}
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; UNI20. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

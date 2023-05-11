@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 1rem;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-left: 1rem;
+}
+
+.container {
+    display: flex;
+    background: linear-gradient(90deg, #5db23f 0%, #5db23f 100%);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.left {
+    background-color: #fff;
+    padding: 2rem;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.left div {
+    margin-bottom: 1rem;
+    /* Add space between paragraphs */
+}
+
+.right {
+    position: relative;
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.right::before {
+    content: '';
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    z-index: -1;
+}
+
+h1,
+h2 {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: #fff;
+    width: 80%;
+    text-align: center;
+}
+
+p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5
+}
+
+input[type="email"] {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    width: 150%;
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #007aff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* Add this line to center the button */
+}
+
+button[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.subscription-form {
+    position: relative;
+}
+
+.subscription-form .error-message p {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    color: red;
+}
+
+.thankyou h2 {
+    font-size: 24px;
+    /* Adjust the font size as desired */
+    color: white;
+    /* Adjust the color as desired */
+    font-weight: bold;
+    /* Add any other desired styles for the h2 element */
+}
+
+.thankyou {
+    border: 2px;
+    /* Adjust the border width and color as desired */
+    padding: 10px;
+    /* Adjust the padding as desired */
+    color: white;
+}

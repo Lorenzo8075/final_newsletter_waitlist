@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles.css') }}">
+    <title>Thank You!</title>
+</head>
+
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    </header>
+    <div class="container">
+        <div class="thankyou">
+            <h2>Thank You for Subscribing!</h2>
+            <div>We've added you to our newsletter. Stay tuned for updates!</div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; UNI20. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
