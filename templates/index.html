@@ -28,7 +28,7 @@
         </div>
         <div class="right">
             <h1>Suscribe to Our Newsletter</h1>
-            <form class="subscription-form" method="POST" action="/">
+            <form class="subscription-form" method="POST" "{{ url_for('index') }}">
                 <input type="email" id="email" name="email" placeholder="Enter your email..." required>
                 <button type="submit">Join the waitlist</button>
                 <div class="error-message">
