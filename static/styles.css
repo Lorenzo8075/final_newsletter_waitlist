@@ -16,10 +16,11 @@ body {
 header {
     width: 100%;
     padding: 1rem;
+    text-align: center;
 }
 
 .logo {
-    height: 100px;
+    height: 150px;
     width: auto;
     margin-left: 1rem;
 }
@@ -97,7 +98,7 @@ p {
 }
 
 input[type="email"] {
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 0.5rem;
     padding: 0.75rem;
     font-size: 0.9rem;
