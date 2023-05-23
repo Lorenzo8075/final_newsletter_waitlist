@@ -3,9 +3,25 @@ from flask import Flask, render_template, request, redirect,url_for, flash
 import mysql.connector
 from mysql.connector import IntegrityError
 from db import get_db
+import configparser
+from flask_mail import Mail, Message
+
 
 app = Flask(__name__, static_folder="static")
 app.secret_key = os.urandom(16)
+
+config = configparser.ConfigParser()
+config.read('email_config.ini')
+
+
+app.config.update(
+    MAIL_SERVER=config.get('mail', 'MAIL_SERVER'),
+    MAIL_PORT=config.getint('mail', 'MAIL_PORT'),
+    MAIL_USE_SSL=config.getboolean('mail', 'MAIL_USE_SSL'),
+    MAIL_USERNAME=config.get('mail', 'MAIL_USERNAME'),
+    MAIL_PASSWORD=config.get('mail', 'MAIL_PASSWORD'),
+)
+mail = Mail(app)
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -32,6 +48,11 @@ def index():
         try:
             cursor.execute(query, (email,))
             db.commit()
+
+            msg = Message("Hello", sender="lorenzo.jiang8075@gmail.com", recipients=[email])
+            msg.html = render_template('email.html')  # assuming 'email.html' is your email template and 'User' is the name of the user
+            mail.send(msg)
+
             return redirect(url_for("thank_you"))
         except IntegrityError:
             db.rollback()

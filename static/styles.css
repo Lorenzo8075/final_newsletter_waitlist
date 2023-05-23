@@ -156,3 +156,17 @@ button[type="submit"]:hover {
     /* Adjust the padding as desired */
     color: white;
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+        border-bottom-right-radius: 1rem;
+    }
+    .right {
+        width: 100%;
+        border-top-right-radius: 0;
+    }
+}
