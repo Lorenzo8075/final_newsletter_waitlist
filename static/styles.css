@@ -28,6 +28,8 @@ header {
 
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(90deg, #1bc6c4 90%, #1bc6c4 100%);
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -164,6 +166,12 @@ button[type="submit"]:hover {
     padding: 10px;
     /* Adjust the padding as desired */
     color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .thankyou div {
