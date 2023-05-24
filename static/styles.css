@@ -180,5 +180,6 @@ button[type="submit"]:hover {
     .right {
         width: 100%;
         border-top-right-radius: 0;
+        margin-left: 0;
     }
 }
