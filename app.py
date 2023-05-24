@@ -48,9 +48,14 @@ def index():
         try:
             cursor.execute(query, (email,))
             db.commit()
-
-            msg = Message("Hello", sender="lorenzo.jiang8075@gmail.com", recipients=[email])
-            msg.html = render_template('email.html')  # assuming 'email.html' is your email template and 'User' is the name of the user
+            # Send email for suscribing (Disabled)
+            # msg = Message("Hello", sender="lorenzo.jiang8075@gmail.com", recipients=[email])
+            # msg.html = render_template('email.html')  # assuming 'email.html' is your email template and 'User' is the name of the user
+            # mail.send(msg)
+            
+            # Send email for suscribing (Disabled)
+            msg = Message("New subscriber!!", sender="lorenzo.jiang8075@gmail.com", recipients=["lorenzo.jiang8075@gmail.com"])
+            msg.body = f"New subscription from {email}"
             mail.send(msg)
 
             return redirect(url_for("thank_you"))

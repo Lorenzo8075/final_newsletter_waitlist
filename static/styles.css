@@ -11,6 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    text-align: center;
 }
 
 header {
@@ -43,10 +44,12 @@ header {
     height: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    text-align: center;
 }
 
 .left div {
     margin-bottom: 1rem;
+    text-align: center;
     /* Add space between paragraphs */
 }
 
@@ -79,10 +82,12 @@ header {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     color: black;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 h1 {
@@ -94,7 +99,8 @@ h1 {
 p {
     color: #333;
     font-size: 1rem;
-    line-height: 1.5
+    line-height: 1.5;
+    text-align: center;
 }
 
 input[type="email"] {
@@ -156,6 +162,11 @@ button[type="submit"]:hover {
     padding: 10px;
     /* Adjust the padding as desired */
     color: white;
+}
+
+.thankyou div {
+    margin-bottom: 1rem;
+    /* adjust as needed */
 }
 
 @media (max-width: 768px) {
