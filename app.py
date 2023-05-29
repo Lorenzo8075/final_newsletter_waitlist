@@ -68,6 +68,10 @@ def index():
 
     return render_template("index.html",css=url_for('static',filename='styles.css'))
 
+@app.route("/first", methods=["GET", "POST"])
+def first():
+    return render_template("test.html")
+
 @app.route("/thankyou", methods=["GET", "POST"])
 def thank_you():
     return render_template("thankyou.html")

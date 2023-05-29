@@ -179,6 +179,20 @@ button[type="submit"]:hover {
     /* adjust as needed */
 }
 
+.first-link {
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.first-link:visited {
+    color: white;
+}
+
+.first-link:hover,
+.first-link:active {
+    color: white;
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

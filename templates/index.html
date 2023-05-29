@@ -33,6 +33,9 @@
             <form class="subscription-form" method="POST" action="{{ url_for('index') }}">
                 <input type="email" id="email" name="email" placeholder="Enter your email..." required>
                 <button type="submit">Join The Fam!</button>
+                <a href="{{ url_for('first') }}" class="first-link">
+                    <div>Let me read it first</div>
+                </a>
                 <div class="error-message">
                     {% with messages = get_flashed_messages() %} {% if messages %}
                     <div>{{ messages[0] }}</div>
